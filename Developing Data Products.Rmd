@@ -1,0 +1,25 @@
+# Developing Data Products
+### Week 2-Assignment- My first Map
+Date: 15 October 2023
+
+Let’s create a map that shows the Taj Mahal in Agra, India.
+Load the library Leaflet.
+```{r}
+library(leaflet)
+```
+
+Create the Map
+```{r}
+my_map <- leaflet() %>%
+addTiles()
+my_map
+```
+
+
+Create a link to the official site of Taj Mahal from where we could get relevant information.
+```{r}
+TajMahal <- c("<a href= 'https://www.tajmahal.gov.in/view_taj.html' >Taj Mahal</a>")
+leaflet() %>%
+addTiles() %>%
+addMarkers(lat=27.173891, lng=78.042068, popup = TajMahal)
+```
